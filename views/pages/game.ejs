@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+      <title>Socket.io Demo</title>
+      <meta charset="utf-8">
+			<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<h1>Socket.io Demo</h1>	 
+		<h2 id='usernameWitness'></h2>
+		<div>
+			<table>
+				<% for(let i=0; i < messages.length; i++) { %>
+					<tr>
+						<td><%= messages[i] %></td>
+					</tr>
+				<% } %>
+				</table>
+		</div>
+		<div>
+			<label for="msg">Message</label>
+			<input type="text" name="msg" id="msg">
+			<button onclick="sendMessage()">Click me</button>
+		</div>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
