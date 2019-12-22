@@ -4,6 +4,7 @@ const msg = document.getElementById('msg');
 const usernameSession = localStorage.getItem('username');
 const usernameWitness = document.getElementById('usernameWitness');
 const messages = document.getElementById('messages');
+let chat = [];
 
 if (usernameSession){
   usernameWitness.innerHTML = usernameSession;
@@ -34,6 +35,8 @@ socket.on('newUserOutput', function(users){
   console.log(users)
 });
 
-// socket.on('newMessageOutput', function(messages){
-//   console.log(messages)
-// });
+socket.on('newMessageOutput', function(message){
+  console.log('messages', messages);
+  chat.push(message)
+  console.log(messages)
+});

@@ -4,13 +4,15 @@
   "description": "Demo socket.io project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js",
+    "prod": "node server.js"
   },
   "author": "Andrew Errity",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.0.1",
     "express": "^4.15.2",
+    "path": "^0.12.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "socket.io": "^1.7.3"
